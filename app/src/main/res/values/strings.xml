@@ -3,4 +3,5 @@
     <string name="height_input">Wzrost (w cm)</string>
     <string name="weight_input">Waga (w kg)</string>
     <string name="sum_button">Oblicz</string>
+    <string name="result_title">Wyniki:</string>
 </resources>
