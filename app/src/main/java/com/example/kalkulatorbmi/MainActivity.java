@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
     private TextView appTitle;
 
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText etWeight;
 
     private Button btSum;
+
+    private TextView tvResultTitle;
+
+    private TextView tvResultValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +42,7 @@ public class MainActivity extends AppCompatActivity {
         etHeight = findViewById(R.id.etHeight);
         etWeight = findViewById(R.id.etWeight);
         btSum = findViewById(R.id.btSum);
+        tvResultTitle = findViewById(R.id.tvResultTitle);
+        tvResultValue = findViewById(R.id.tvResultValue);
     }
 }

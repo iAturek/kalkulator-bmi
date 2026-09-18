@@ -4,4 +4,6 @@
     <string name="weight_input">Waga (w kg)</string>
     <string name="sum_button">Oblicz</string>
     <string name="result_title">Wyniki:</string>
+    <string name="result_none">Brak wyników</string>
+    <string name="result_value">Wzrost: %1$s | Waga: %2$s | Wynik: %3$s</string>
 </resources>
