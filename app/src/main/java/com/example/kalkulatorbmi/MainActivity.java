@@ -44,5 +44,22 @@ public class MainActivity extends AppCompatActivity {
         btSum = findViewById(R.id.btSum);
         tvResultTitle = findViewById(R.id.tvResultTitle);
         tvResultValue = findViewById(R.id.tvResultValue);
+
+        btSum.setOnClickListener(v -> sum());
+    }
+    private void sum(){
+        String heightString = etHeight.getText().toString().trim();
+        String weightString = etWeight.getText().toString().trim();
+
+        if((heightString.isEmpty() || weightString.isEmpty()) || (!heightString.matches("\\d+") || !weightString.matches("\\d+"))){
+            Toast.makeText(this, R.string.error_empty_values, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double height = Double.parseDouble(heightString);
+        int weight = Integer.parseInt(weightString);
+        height = height / 100.0;
+
+        tvResultValue.setText(getString(R.string.result_value, height, weight));
     }
 }
