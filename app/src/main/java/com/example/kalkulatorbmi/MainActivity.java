@@ -60,6 +60,27 @@ public class MainActivity extends AppCompatActivity {
         int weight = Integer.parseInt(weightString);
         height = height / 100.0;
 
-        tvResultValue.setText(getString(R.string.result_value, height, weight));
+        double bmi = weight / (height * height);
+
+        String resultText;
+        if (bmi < 16.0) {
+            resultText = "Wygłodzenie";
+        } else if (bmi >= 16.0 && bmi < 17.0) {
+            resultText = "Wychudzenie";
+        } else if (bmi >= 17.0 && bmi < 18.5) {
+            resultText = "Niedowaga";
+        } else if (bmi >= 18.5 && bmi < 25.0) {
+            resultText = "Wartość prawidłowa (Norma)";
+        } else if (bmi >= 25.0 && bmi < 30.0) {
+            resultText = "Nadwaga";
+        } else if (bmi >= 30.0 && bmi < 35.0) {
+            resultText = "Otyłość I stopnia";
+        } else if (bmi >= 35.0 && bmi < 40.0) {
+            resultText = "Otyłość II stopnia (kliniczna)";
+        } else {
+            resultText = "Otyłość III stopnia (skrajna)";
+        }
+
+        tvResultValue.setText(getString(R.string.result_value, height, weight, bmi, resultText));
     }
 }
