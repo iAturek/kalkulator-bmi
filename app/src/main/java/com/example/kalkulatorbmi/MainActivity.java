@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText etWeight;
 
+    private Button btSum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +35,6 @@ public class MainActivity extends AppCompatActivity {
         appTitle = findViewById(R.id.appTitle);
         etHeight = findViewById(R.id.etHeight);
         etWeight = findViewById(R.id.etWeight);
+        btSum = findViewById(R.id.btSum);
     }
 }
